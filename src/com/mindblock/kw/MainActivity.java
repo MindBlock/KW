@@ -37,11 +37,6 @@ public class MainActivity extends Activity {
 	
 	private void initButtonEffect(){
 		this.rotationButton = (ImageButton) findViewById(R.id.kw_rotate_ib);
-//		this.rotationButton.setLayoutParams(new LayoutParams(
-//				this.getScreenDimension().x, 
-//				this.getScreenDimension().x));
-		
-		
 		
 		this.rotationButton.setOnClickListener(new OnClickListener() {
 			
@@ -67,6 +62,9 @@ public class MainActivity extends Activity {
 	private int getRandomAudioSample(){
 		
 		int r = new Random().nextInt(this.audioSamples);
+		
+		//TEST:
+		//return (R.raw.roy1 + r);
 		
 		switch(r){
 		
