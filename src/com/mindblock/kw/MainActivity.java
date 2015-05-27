@@ -21,7 +21,7 @@ import android.widget.ImageButton;
 public class MainActivity extends Activity {
 	
 	private ImageButton rotationButton;
-	private final int audioSamples = 3;
+	private final int audioSamples = R.raw.class.getFields().length;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -63,20 +63,7 @@ public class MainActivity extends Activity {
 		
 		int r = new Random().nextInt(this.audioSamples);
 		
-		//TEST:
-		//return (R.raw.roy1 + r);
-		
-		switch(r){
-		
-		case 0: 
-			return R.raw.roy1;
-		case 1:
-			return R.raw.roy2;
-		case 2:
-			return R.raw.roy3;
-		default:
-			return R.raw.roy1;
-		}
+		return (R.raw.roy1 + r);
 	}
 	
 	@SuppressLint("NewApi")
